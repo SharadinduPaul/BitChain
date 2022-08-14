@@ -1,0 +1,8 @@
+.Sidebar{
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100%;
+    width: 20rem;
+    background-color: #fff;
+}
