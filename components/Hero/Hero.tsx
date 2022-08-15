@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import styles from "./Hero.module.css";
-import bitCoin from "../../assets/bitCoin.png";
+import bitCoin from "../../assets/bitcoin.png";
 
 export const Hero = () => {
   const HeroRef = useRef<HTMLDivElement>();
