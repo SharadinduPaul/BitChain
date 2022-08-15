@@ -1,8 +1,22 @@
-.Sidebar{
-    top: 0;
-    left: 0;
-    position: fixed;
-    height: 100%;
-    width: 20rem;
-    background-color: #fff;
+.Sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 20rem;
+  max-width: 100%;
+  background-color: rgb(55, 55, 55);
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1vh;
+  flex-direction: column;
+}
+.Option {
+  color: rgb(171, 171, 171);
+  cursor: pointer;
+}
+.Selected{
+  color: rgb(255, 255, 255);
 }
