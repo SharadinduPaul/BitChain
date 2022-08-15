@@ -9,12 +9,9 @@ interface SidebarOptionProps {
     href: string;
   };
 }
-interface HandleClick {
-  id: number;
-}
-
 export const Sidebar = () => {
   const [selected, setSelected] = useState<number>(1);
+
   function handleClick(id: number) {
     setSelected(id);
   }
@@ -29,9 +26,10 @@ export const Sidebar = () => {
       </div>
     );
   };
+
   return (
     <div className={styles.Sidebar}>
-      <h2>Sidebar</h2>
+      <h2>Content</h2>
       {options.map((option, index) => {
         return <SidebarOption option={option} id={index + 1} key={index} />;
       })}

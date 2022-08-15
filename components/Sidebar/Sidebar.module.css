@@ -5,18 +5,47 @@
   height: 100vh;
   width: 20rem;
   max-width: 100%;
-  background-color: rgb(55, 55, 55);
+  background-color: rgb(36, 36, 36);
 
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 1vh;
+  gap: 2.5vh;
   flex-direction: column;
+
+  animation: sidebarMain 3s alternate infinite;
+  box-shadow:
+  -0.6px 0px 4.5px rgba(0, 0, 0, 0.02),
+  -0.7px 0px 10.8px rgba(0, 0, 0, 0.028),
+  0.2px 0px 20.4px rgba(0, 0, 0, 0.035),
+  2.7px 0px 36.4px rgba(0, 0, 0, 0.042),
+  9px 0px 68.1px rgba(0, 0, 0, 0.05),
+  54px 0px 163px rgba(0, 0, 0, 0.07)
+;
+
+}
+
+.Sidebar > h2{
+  font-size: 2.6rem;
+  /* font-family: 'Aboreto', sans-serif; */
+  font-family: 'Cinzel', serif;
+  font-weight: 500;
+  margin: 0 1.5rem 2vh;
 }
 .Option {
-  color: rgb(171, 171, 171);
+  --white_offside: rgb(128, 128, 128);
+  color: var(--white_offside);
   cursor: pointer;
+  font-family: 'Courgette', cursive;
+  font-size: 1.12rem;
+  margin: 0 3rem;
+  transform-origin: left;
 }
 .Selected{
-  color: rgb(255, 255, 255);
+  transition: 2s;
+  animation: optionSelected 0.2s forwards ease-out;
+}
+@keyframes optionSelected {
+  0%{ color: var(--white_offside);transform: scale(1); }
+  100%{ color: #fff;transform: scale(1.2);}
 }

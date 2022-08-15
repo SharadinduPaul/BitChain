@@ -1,0 +1,38 @@
+.Preloader {
+  --h2_animation_delay: 0.5s;
+  --h2_animation_time: 0.5s;
+  --bg_animation_delay: 1.5s;
+  --bg_animation_time: 1.5s;
+
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  color: black;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  animation: PreloaderAnimation var(--bg_animation_time) ease-in-out forwards;
+  animation-delay: var(--bg_animation_delay);
+}
+@keyframes PreloaderAnimation {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  20% {
+    clip-path: polygon(0 0, 90% 10%, 100% 100%, 10% 90%);
+  }
+  40% {
+    clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
+  }
+  100% {
+    clip-path: polygon(50% 10%, 50% 10%, 50% 90%, 50% 90%);
+  }
+}
