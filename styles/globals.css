@@ -13,6 +13,7 @@ body {
   overflow: hidden auto;
   background-color: var(--bg_color);
   color: var(--text_color);
+  scroll-behavior: smooth;
 }
 *,
 *::after,

@@ -1,0 +1,16 @@
+.ContentSection {
+  max-width: 50rem;
+}
+.ContentSection h3 {
+  font-family: "Aboreto", sans-serif;
+  font-weight: 600;
+  font-size: 8vh;
+  margin: 8vh 0 6vh;
+}
+.ContentSection p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: rgb(218, 218, 218);
+  margin-bottom: 4vh;
+}

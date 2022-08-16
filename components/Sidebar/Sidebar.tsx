@@ -3,6 +3,7 @@ import styles from "./Sidebar.module.css";
 import { data } from "../../data/Home.data";
 import { MainContext } from "../../common/Context/MainContext";
 import type { Data } from "../../data/Home.data";
+import Link from "next/link";
 
 interface SidebarOptionProps {
   id: number;
@@ -17,12 +18,13 @@ export const Sidebar = () => {
 
   const SidebarOption = ({ option, id }: SidebarOptionProps) => {
     return (
-      <div
-        className={`${styles.Option} ${id === selected && styles.Selected}`}
-        onClick={() => handleClick(id)}
-      >
-        {option.title}
-      </div>
+      <Link href={`#${option.id}`}>
+        <div
+          className={`${styles.Option} ${id === selected && styles.Selected}`}
+        >
+          {option.title}
+        </div>
+      </Link>
     );
   };
 

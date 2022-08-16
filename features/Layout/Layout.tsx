@@ -35,6 +35,10 @@ export const Layout = ({ title, className, children }: Layout) => {
           href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
           rel="stylesheet"
         ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,700&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <PreLoader />
       <div className={className}>{children}</div>
