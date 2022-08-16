@@ -24,10 +24,11 @@ export const Hero = () => {
       setMouseX(mouseMoveX);
       setMouseY(mouseMoveY);
     });
-    return () =>
-      HeroRef.current?.removeEventListener("mouseleave", () =>
-        alert("I am retired")
-      );
+    HeroRef.current?.addEventListener("mouseout", () => {
+      setMouseX(0);
+      setMouseY(0);
+    });
+    return () => HeroRef.current?.removeEventListener("mouseleave", () => {});
   }, []);
   return (
     <div className={styles.Hero} ref={HeroRef}>

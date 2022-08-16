@@ -12,6 +12,7 @@
   justify-content: center;
   gap: 2.5vh;
   flex-direction: column;
+  overflow: hidden;
 
   animation: sidebarMain 3s alternate infinite;
   box-shadow:

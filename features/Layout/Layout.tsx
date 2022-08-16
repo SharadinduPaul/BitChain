@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
-import { PreLoader } from "../../components";
+import { Footer, PreLoader } from "../../components";
 import styles from "./Layout.module.css";
 
 interface Layout {
@@ -42,6 +42,7 @@ export const Layout = ({ title, className, children }: Layout) => {
       </Head>
       <PreLoader />
       <div className={className}>{children}</div>
+      <Footer />
     </>
   );
 };

@@ -1,0 +1,39 @@
+.Footer{
+    height: 40vh;
+    width: 100vw;
+    background-color: #fff;
+    background-image: url(../../assets//whiteBG.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+.Footer span{
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--bg_color);
+  
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    clip-path: polygon(100% 0, 0 0, 50% 50%);
+}
+.Footer div{
+    flex: 1;
+}
+.Footer section{
+    min-height: 6vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+    background-color: rgb(249, 148, 33);
+color: rgb(0, 0, 0);
+font-size: 2.2vh;
+font-weight: 500;
+font-family: 'Cinzel', serif;
+}
