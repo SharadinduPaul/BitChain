@@ -3,6 +3,8 @@
   max-height: 100vh;
   width: 100%;
   background-color: #fff;
+  
+  color: black;
   margin: 0 0 5rem;
 
   position: relative;
@@ -11,7 +13,16 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 3vh;
+  gap: 5vh;
+
+  background-image: url(../../assets/blockChainBG.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  
+  /* box-shadow: 0 2vw 6vw rgba(0, 0, 0, 0.1) inset; */
+  perspective: 350px;
 }
 .Hero > .HeroTriangle {
   height: 5rem;
@@ -30,9 +41,20 @@
   
   /* font-family: 'Cinzel', serif; */
   font-weight: 800;
-  font-size: 3rem;
-  color: black;
+  font-size: 10vh;
+  text-shadow:
+  0px 0px 2.1px #fff,
+  0px 0px 5px #fff,
+  0px 0px 9.2px #fff,
+  0px 0px 15.4px #fff,
+  0px 0px 25.1px #fff,
+  0px 0px 42px #fff,
+  0px 0px 84px #fff
+;
+
 }
 .bitCoinImage{
     box-sizing: content-box;
+    transform-style: preserve-3d;
+    transition: 0.06s;
 }

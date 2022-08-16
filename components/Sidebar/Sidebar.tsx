@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./Sidebar.module.css";
-import { data as options } from "../../data/Sidebar.data";
+import { data } from "../../data/Home.data";
+import { MainContext } from "../../common/Context/MainContext";
+import type { Data } from "../../data/Home.data";
 
 interface SidebarOptionProps {
   id: number;
-  option: {
-    text: string;
-    href: string;
-  };
+  option: Data;
 }
 export const Sidebar = () => {
-  const [selected, setSelected] = useState<number>(1);
+  const { selected, setSelected } = useContext(MainContext);
 
   function handleClick(id: number) {
     setSelected(id);
@@ -22,7 +21,7 @@ export const Sidebar = () => {
         className={`${styles.Option} ${id === selected && styles.Selected}`}
         onClick={() => handleClick(id)}
       >
-        {option.text}
+        {option.title}
       </div>
     );
   };
@@ -30,7 +29,7 @@ export const Sidebar = () => {
   return (
     <div className={styles.Sidebar}>
       <h2>Content</h2>
-      {options.map((option, index) => {
+      {data.map((option, index) => {
         return <SidebarOption option={option} id={index + 1} key={index} />;
       })}
     </div>

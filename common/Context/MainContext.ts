@@ -1,7 +1,12 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 
-const defaultData = {
-
+interface DefaultData{
+    selected: number,
+    setSelected: Dispatch<SetStateAction<number>>
+}
+const defaultData:DefaultData = {
+selected: 0,
+setSelected: ()=> {}
 }
 
 export const MainContext = React.createContext(defaultData)
