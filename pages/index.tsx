@@ -6,7 +6,11 @@ import { data } from "../data/Home.data";
 
 const Home: NextPage = () => {
   return (
-    <Layout title={"BitChain by Sharadindu Paul"} className={styles.HomePage}>
+    <Layout
+      preloader
+      title={"BitChain by Sharadindu Paul"}
+      className={styles.HomePage}
+    >
       <Hero />
       <div className={styles.HomepageContainer}>
         <Sidebar />

@@ -5,11 +5,12 @@ import styles from "./Layout.module.css";
 
 interface Layout {
   title?: string;
+  preloader?: boolean;
   className?: string;
   children: any;
 }
 
-export const Layout = ({ title, className, children }: Layout) => {
+export const Layout = ({ title, preloader, className, children }: Layout) => {
   return (
     <>
       <Head>
@@ -40,7 +41,7 @@ export const Layout = ({ title, className, children }: Layout) => {
           rel="stylesheet"
         ></link>
       </Head>
-      <PreLoader />
+      {preloader && <PreLoader />}
       <div className={className}>{children}</div>
       <Footer />
     </>

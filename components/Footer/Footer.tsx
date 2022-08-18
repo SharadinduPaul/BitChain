@@ -12,7 +12,9 @@ export const Footer = () => {
         <Link href={"/currency-exchange-calculator"}>
           <h4>Currency exchange calculator</h4>
         </Link>
-        <h4>A note from the developer</h4>
+        <Link href={"/note-from-developer"}>
+          <h4>A note from the developer</h4>
+        </Link>
       </div>
       <section>Made by Sharadindu Paul</section>
     </div>

@@ -35,6 +35,7 @@
   font-size: 2rem;
   font-family: "Aboreto", sans-serif;
   margin-bottom: 1vh;
+  text-align: center;
 }
 .Footer h4{
   font-size: 1.2rem;
@@ -43,6 +44,7 @@
   cursor: pointer;
   position: relative;
   border-bottom: 1px solid grey;
+  text-align: center;
 }
 .Footer h4::after{
 content: '';
