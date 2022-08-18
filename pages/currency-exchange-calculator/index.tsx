@@ -17,7 +17,7 @@ const getCurrencies = async (arraySetter: any, objSetter: any) => {
   arraySetter(resArr);
   console.log(resArr);
 };
-const index: NextPage = () => {
+const Currency: NextPage = () => {
   const [data, setData] = useState({});
   const [dataArr, setDataArr] = useState([]);
   const [firstCurrency, setFirstCurrency] = useState("INR");
@@ -69,4 +69,4 @@ const index: NextPage = () => {
   );
 };
 
-export default index;
+export default Currency;
