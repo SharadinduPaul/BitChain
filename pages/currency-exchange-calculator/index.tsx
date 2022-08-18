@@ -18,7 +18,7 @@ const getCurrencies = async (arraySetter: any, objSetter: any) => {
   console.log(resArr);
 };
 const Currency: NextPage = () => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState<any>({});
   const [dataArr, setDataArr] = useState([]);
   const [firstCurrency, setFirstCurrency] = useState("INR");
   const [lastCurrence, setLastCurrency] = useState("INR");
@@ -30,7 +30,9 @@ const Currency: NextPage = () => {
   }, []);
 
   const calculate = () => {
-    const multiplier = data[lastCurrence]?.last / data[firstCurrency]?.last;
+    const multiplier = data
+      ? data[lastCurrence]?.last / data[firstCurrency]?.last
+      : 1;
     let final: number = firstAmount * multiplier;
     setFinalAmount(final);
   };
