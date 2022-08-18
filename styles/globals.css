@@ -24,3 +24,13 @@ body {
 }
 
 /* <-------- Utility classes --------> */
+
+::-moz-selection {
+  color: black;
+  background: white;
+}
+
+::selection {
+  color: black;
+  background: white;
+}

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { MainContext } from "../../common/Context/MainContext";
 import type { Data } from "../../data/Home.data";
-
+import { HoverImage } from "../../components";
 import styles from "./ContentSection.module.css";
 
 interface ContentSectionProps {

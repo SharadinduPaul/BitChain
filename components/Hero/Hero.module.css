@@ -1,6 +1,6 @@
 .Hero {
-  height: 40rem;
-  max-height: 100vh;
+  height: 80vh;
+  max-height: 40rem;
   width: 100%;
   background-color: #fff;
   
@@ -31,13 +31,15 @@
 
   position: absolute;
   left: 50%;
-  top: 100%;
+  top: 98%;
   transform: translateX(-50%);
   clip-path: polygon(100% 0, 0 0, 50% 50%);
 }
 
 .Hero > h2{
   font-family: 'Aboreto', sans-serif;
+  width: 100%;
+  text-align: center;
   
   /* font-family: 'Cinzel', serif; */
   font-weight: 800;
@@ -57,4 +59,35 @@
     box-sizing: content-box;
     transform-style: preserve-3d;
     transition: 0.06s;
+    height: 15rem;
+    width: 15rem;
+    position: relative;
+}
+
+@media all and (max-width: 800px ) {
+  .Hero > h2{
+    font-size: 6vh;
+  }
+  .bitCoinImage{
+    height: 10rem;
+    width: 10rem;
+    animation: rotateonY 4s infinite ;
+  }
+  @keyframes rotateonY {
+    0%{
+      transform: rotateY(0deg) rotateX(0deg);
+    }
+    25%{
+      transform: rotateY(180deg) rotateX(0deg);
+    }
+    50%{
+      transform: rotateY(180deg) rotateX(180deg);
+    }
+    75%{
+      transform: rotateY(0deg) rotateX(180deg);
+    }
+    100%{
+      transform: rotateY(0deg) rotateX(0deg);
+    }
+  }
 }

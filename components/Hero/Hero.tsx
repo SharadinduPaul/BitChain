@@ -10,19 +10,20 @@ export const Hero = () => {
   const [mouseY, setMouseY] = useState(0);
   const dampingFactor = 0.05;
   useEffect(() => {
-    const height = window.innerHeight;
-    const width = window.innerWidth;
-    const midWidth = width / 2;
-    const midHeight = height / 2;
     let mouseMoveX = 0;
     let mouseMoveY = 0;
 
     HeroRef.current?.addEventListener("mousemove", (e) => {
-      console.log(e);
-      mouseMoveY = e.clientY - midHeight;
-      mouseMoveX = e.clientX - midWidth;
-      setMouseX(mouseMoveX);
-      setMouseY(mouseMoveY);
+      const height = window.innerHeight;
+      const width = window.innerWidth;
+      const midWidth = width / 2;
+      const midHeight = height / 2;
+      if (width > 1100) {
+        mouseMoveY = e.clientY - midHeight;
+        mouseMoveX = e.clientX - midWidth;
+        setMouseX(mouseMoveX);
+        setMouseY(mouseMoveY);
+      }
     });
     HeroRef.current?.addEventListener("mouseout", () => {
       setMouseX(0);
@@ -41,7 +42,7 @@ export const Hero = () => {
           }deg)`,
         }}
       >
-        <Image src={bitCoin} height={200} width={200} alt="Bitcoin" />
+        <Image src={bitCoin} layout="fill" alt="Bitcoin" />
       </section>
       <h2>BlockChain & BitCoin</h2>
     </div>

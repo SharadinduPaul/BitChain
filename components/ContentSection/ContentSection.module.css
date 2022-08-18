@@ -1,4 +1,6 @@
 .ContentSection {
+  position: relative;
+  width: 100%;
   max-width: 50rem;
 }
 .ContentSection h3 {
@@ -13,4 +15,26 @@
   font-weight: 300;
   color: rgb(218, 218, 218);
   margin-bottom: 4vh;
+}
+.ContentSection .Image{
+  position: relative;
+  height: 30rem;
+  width: 100%;
+  overflow: hidden;
+  margin: 4vh 0;
+  transition: .2s;
+}
+@media all and (max-width: 700px) {
+  .ContentSection h3{
+    padding: 1vh 0;
+    font-size: 3vh;
+    margin: 4vh 0 3vh;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg_color);
+  }
+  .ContentSection p{
+    font-size: 1rem;
+    margin-bottom: 2vh;
+  }
 }

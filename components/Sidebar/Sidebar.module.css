@@ -49,3 +49,50 @@
   0%{ color: var(--white_offside);transform: scale(1); }
   100%{ color: #fff;transform: scale(1.2);}
 }
+
+.backButton{
+  display: none;
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: rgb(223, 223, 223);
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+@media all and (max-width: 1100px) {
+  .Sidebar{
+    position: fixed;
+    left: 0;
+    background-color: var(--bg_color, black);
+    z-index: 10;
+  }
+  .backButton{
+    display: block;
+  }
+  .active{
+    animation: sideinout 0.6s forwards ease-in-out;
+  }
+  .inActive{
+    animation: sideoutin 0.6s ease-in-out forwards;
+  }
+}
+@keyframes sideinout {
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+  
+}
+@keyframes sideoutin {
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
