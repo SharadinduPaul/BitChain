@@ -23,6 +23,41 @@
 }
 .Footer div {
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: black;
+
+  gap: 1.4vh;
+}
+.Footer h2{
+  font-size: 2rem;
+  font-family: "Aboreto", sans-serif;
+  margin-bottom: 1vh;
+}
+.Footer h4{
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid grey;
+}
+.Footer h4::after{
+content: '';
+width: 0;
+height: 1.2px;
+background-color: #000;
+position: absolute;
+top: 100%;
+left: 50%;
+transform: translateX(-50%);
+transition: .35s;
+
+}
+.Footer h4:hover:after{
+width: 100%;
 }
 .Footer section {
   min-height: 6vh;

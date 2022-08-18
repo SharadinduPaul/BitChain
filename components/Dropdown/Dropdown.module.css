@@ -1,0 +1,45 @@
+.Dropdown {
+  position: relative;
+  height: 2rem;
+  background-color: rgb(255, 216, 41);
+  display: flex;
+  cursor: pointer;
+}
+.Dropdown > text {
+  height: 100%;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  padding: 0.4rem;
+}
+.OptionContainer {
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: max-content;
+  max-height: 10rem;
+
+  background-color: rgb(238, 238, 238);
+  color: black;
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.Option {
+  width: 100%;
+  border-bottom: 1px solid grey;
+  font-size: 1rem;
+  padding: 0.4rem;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+.Option:hover {
+  background-color: #fff;
+}
