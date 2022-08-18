@@ -5,8 +5,9 @@ import { useState } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [selected, setSelected] = useState(1);
+  const [active, setActive] = useState(false);
   return (
-    <MainContext.Provider value={{ selected, setSelected }}>
+    <MainContext.Provider value={{ selected, setSelected, active, setActive }}>
       <Component {...pageProps} />
     </MainContext.Provider>
   );

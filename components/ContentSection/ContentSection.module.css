@@ -30,7 +30,8 @@
     font-size: 3vh;
     margin: 4vh 0 3vh;
     position: sticky;
-    top: 0;
+    top: 3.5rem;
+    left: 2rem;
     background-color: var(--bg_color);
   }
   .ContentSection p{

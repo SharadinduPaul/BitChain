@@ -12,8 +12,7 @@ interface SidebarOptionProps {
   option: Data;
 }
 export const Sidebar = () => {
-  const { selected, setSelected } = useContext(MainContext);
-  const [active, setActive] = useState(true);
+  const { selected, setSelected, active, setActive } = useContext(MainContext);
 
   function handleClick(id: number) {
     setSelected(id);

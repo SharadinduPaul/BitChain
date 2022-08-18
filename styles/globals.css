@@ -5,12 +5,15 @@
 }
 
 /* <-------- Basic project styling --------> */
+html{
+  
+  overflow: hidden auto;
+}
 html,
 body {
   height: 100vh;
   width: 100vw;
   position: relative;
-  overflow: hidden auto;
   background-color: var(--bg_color);
   color: var(--text_color);
   scroll-behavior: smooth;

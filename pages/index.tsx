@@ -1,10 +1,8 @@
 import type { NextPage } from 'next'
-import { Sidebar, Hero, ContentSection } from "../components";
+import { Sidebar, Hero, ContentSection, MobileNav } from "../components";
 import styles from "../styles/Home.module.css";
 import { Layout } from "../features";
 import { data } from "../data/Home.data";
-import { MainContext } from "../common/Context/MainContext";
-import { useContext, useRef } from "react";
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +11,7 @@ const Home: NextPage = () => {
       <div className={styles.HomepageContainer}>
         <Sidebar />
         <main className={styles.HomeContent}>
+          <MobileNav />
           {data?.map((item, index) => {
             return <ContentSection item={item} index={index} key={index} />;
           })}
@@ -20,5 +19,5 @@ const Home: NextPage = () => {
       </div>
     </Layout>
   );
-}
+};
 export default Home
